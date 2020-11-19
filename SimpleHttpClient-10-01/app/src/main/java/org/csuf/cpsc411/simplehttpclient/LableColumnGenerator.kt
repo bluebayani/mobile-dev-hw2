@@ -7,19 +7,21 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 
-class LableColumnGenerator(val ctx : Context) {
+class LableColumnGenerator(val ctx: Context) {
 
-    fun generate() : LinearLayout {
+    fun generate(): LinearLayout {
         val layoutObj = LinearLayout(ctx)
         val lParams = ViewGroup.LayoutParams(
             ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT)
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
         layoutObj.layoutParams = lParams
         layoutObj.orientation = LinearLayout.VERTICAL
         layoutObj.setBackgroundColor(Color.GREEN)
         var lbParams = LinearLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT)
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
         lbParams.weight = 1.0F
         lbParams.topMargin = 5
         var lbl = TextView(ctx)
@@ -34,7 +36,8 @@ class LableColumnGenerator(val ctx : Context) {
         lbl.setBackgroundColor(Color.WHITE)
         lbParams = LinearLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT)
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
         lbParams.weight = 1.0F
         lbParams.topMargin = 5
         layoutObj.addView(lbl, lbParams)
